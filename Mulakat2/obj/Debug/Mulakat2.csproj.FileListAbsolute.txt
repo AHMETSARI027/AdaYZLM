@@ -1,0 +1,10 @@
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\obj\Debug\Mulakat2.csprojAssemblyReference.cache
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\obj\Debug\Mulakat2.Form1.resources
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\obj\Debug\Mulakat2.Properties.Resources.resources
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\obj\Debug\Mulakat2.csproj.GenerateResource.cache
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\obj\Debug\Mulakat2.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\bin\Debug\Mulakat2.exe.config
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\bin\Debug\Mulakat2.exe
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\bin\Debug\Mulakat2.pdb
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\obj\Debug\Mulakat2.exe
+C:\Users\ahmet\source\repos\Mulakat2\Mulakat2\obj\Debug\Mulakat2.pdb
