@@ -87,6 +87,7 @@ namespace Mulakat2
                 string[] sehirler = { "Ankara", "İstanbul", "İzmir", "Bursa", "Edirne", "Konya", "Antalya", "Diyarbakır", "Van", "Rize" };
                 int no2 = rastgele.Next(sehirler.Length);
                 string sehir = sehirler[no2];
+
                 string[,] musteri = new string[musteriAdet, 3];
 
                 musteri[i, 0] = ad;
