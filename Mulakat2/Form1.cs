@@ -81,14 +81,10 @@ namespace Mulakat2
                 string[] isimler = { "ahmet", "ersan", "veli", "cevdet" };
                 int no = rastgele.Next(isimler.Length);
                 string ad = isimler[no];
-
-                string[] soyisimler = { "yıldırım", "sarı", "taşkın", "zoroğlu" };
-                //Random rasgelesayi1 = new Random();
+                string[] soyisimler = { "yıldırım", "sarı", "taşkın", "zoroğlu" };              
                 int no1 = rastgele.Next(soyisimler.Length);
                 string soyad = soyisimler[no1];
-
                 string[] sehirler = { "Ankara", "İstanbul", "İzmir", "Bursa", "Edirne", "Konya", "Antalya", "Diyarbakır", "Van", "Rize" };
-                //Random rasgelesayi2 = new Random();
                 int no2 = rastgele.Next(sehirler.Length);
                 string sehir = sehirler[no2];
                 string[,] musteri = new string[musteriAdet, 3];
