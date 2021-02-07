@@ -13,6 +13,7 @@ namespace Mulakat2
 {
     public partial class Form1 : Form
     {
+        // Bağlatı oluşturma
         SqlConnection baglanti;
         SqlCommand komut;
         SqlDataAdapter da;
@@ -21,6 +22,7 @@ namespace Mulakat2
         {
             InitializeComponent();
         }
+        //Musteri tablosunu datagirdWiewde görüntüleme
         void musteri()
         {
             baglanti = new SqlConnection("Data Source = AHMETSARI; Initial Catalog = mulakat; Integrated Security = True");
@@ -28,10 +30,11 @@ namespace Mulakat2
             da = new SqlDataAdapter("SELECT *FROM musteri", baglanti);
             DataTable tabloMusteri = new DataTable();
             da.Fill(tabloMusteri);
-            dataGridView1.DataSource = tabloMusteri;
+            dgv_musteri.DataSource = tabloMusteri;
             baglanti.Close();
         }
 
+        //Sepet tablosunu datagirdWiewde görüntüleme
         void sepet()
         {
             baglanti = new SqlConnection("Data Source = AHMETSARI; Initial Catalog = mulakat; Integrated Security = True");
@@ -39,10 +42,10 @@ namespace Mulakat2
             da = new SqlDataAdapter("SELECT *FROM sepet", baglanti);
             DataTable tabloMusteri = new DataTable();
             da.Fill(tabloMusteri);
-            dataGridView2.DataSource = tabloMusteri;
+            dgv_sepet.DataSource = tabloMusteri;
             baglanti.Close();
         }
-
+        //SepetUrun tablosunu datagirdWiewde görüntüleme
         void sepetUrun()
         {
             baglanti = new SqlConnection("Data Source = AHMETSARI; Initial Catalog = mulakat; Integrated Security = True");
@@ -50,9 +53,10 @@ namespace Mulakat2
             da = new SqlDataAdapter("SELECT *FROM sepeturun", baglanti);
             DataTable tabloMusteri = new DataTable();
             da.Fill(tabloMusteri);
-            dataGridView3.DataSource = tabloMusteri;
+            dgv_sepetUrun.DataSource = tabloMusteri;
             baglanti.Close();
         }
+        //Tblolarda Sıfırlama işlemi için
         void IdSifirla()
         {
             baglanti = new SqlConnection("Data Source = AHMETSARI; Initial Catalog = mulakat; Integrated Security = True");
@@ -109,7 +113,7 @@ namespace Mulakat2
 
             for (int i = 0; i < Sepetadet; i++)
             {
-                //Random rasgeleMusteriAdet = new Random();
+                
                 int rastgeleMusteriId = rastgele.Next(musteriAdet);
                 string sorgu = "INSERT INTO sepet (MusteriId) Values (@MusteriId)";
                 komut = new SqlCommand(sorgu, baglanti);
@@ -123,16 +127,16 @@ namespace Mulakat2
             //Ürün Oluşturma
             for (int k = 1; k < Sepetadet+1; k++)
             {
-                //Random randomSepetSayi = new Random();
+               
                 int rdsayi = rastgele.Next(1, 5);
                 for (int i = 1; i < rdsayi; i++)
                 {
-                    //Random rasgeleSepetAdet = new Random();
+
                     int rastgeleSepetId = rastgele.Next(Sepetadet);
-                    ///Random rastgeleTtr = new Random();
+
                     int rastgeleTutar = rastgele.Next(100, 1000);
 
-                    //Random rastgeleAciklama = new Random();
+                    
                     string harfler = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZabcçdefgğhıijklmnoöprsştuüvyz";
                     string aciklamaUret = "";
                     for (int j = 0; j < 6; j++)
@@ -157,9 +161,12 @@ namespace Mulakat2
             IdSifirla();
 
             TestVerisiOlustur(50, 100);
+
             musteri();
+
             sepet();
-            sepetUrun();
+
+            sepetUrun();  
             
 
 
